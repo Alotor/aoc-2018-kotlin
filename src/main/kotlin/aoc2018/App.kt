@@ -2,10 +2,12 @@ package aoc2018
 
 fun main(args: Array<String>) {
     val programs = hashMapOf(
-        "01A" to (Exercise01::sumCalibration to "/01A"),
-        "01B" to (Exercise01::sumCalibrationCicles to "/01B"),
-        "02A" to (Exercise02::checksumBoxes to "/02A"),
-        "02B" to (Exercise02::findBox to "/02B")
+        "01A" to (Exercise01::sumCalibration to "/01"),
+        "01B" to (Exercise01::sumCalibrationCicles to "/01"),
+        "02A" to (Exercise02::checksumBoxes to "/02"),
+        "02B" to (Exercise02::findBox to "/02"),
+        "03A" to (Exercise03::countIntersections to "/03"),
+        "03B" to (Exercise03::checkClean to "/03")
     )
 
     when (val pair = programs[args[0]]) {
