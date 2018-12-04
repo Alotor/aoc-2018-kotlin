@@ -7,7 +7,9 @@ fun main(args: Array<String>) {
         "02A" to (Exercise02::checksumBoxes to "/02"),
         "02B" to (Exercise02::findBox to "/02"),
         "03A" to (Exercise03::countIntersections to "/03"),
-        "03B" to (Exercise03::checkClean to "/03")
+        "03B" to (Exercise03::checkClean to "/03"),
+        "04A" to (Exercise04::sleepingGuard to "/04"),
+        "04B" to (Exercise04::guardMinuteFrequency to "/04")
     )
 
     when (val pair = programs[args[0]]) {
