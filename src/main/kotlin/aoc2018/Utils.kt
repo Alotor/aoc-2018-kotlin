@@ -10,4 +10,11 @@ object Utils {
 
     fun readLines(filename: URL): List<String> =
         File(filename.toURI()).readLines()
+
 }
+
+operator fun Pair<Int, Int>.plus(element: Pair<Int, Int>): Pair<Int, Int> =
+    Pair(first + element.first, second + element.second)
+
+
+

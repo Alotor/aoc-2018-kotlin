@@ -6,24 +6,13 @@ object Exercise02 {
             .entries
             .fold(Pair(0, 0), { acc, v ->
                 val count = v.value.count()
-                if (count == 2) {
-                    Pair(1, acc.second)
-                } else if (count == 3) {
-                    Pair(acc.first, 1)
-                } else {
-                    acc
-                }
+                Pair(
+                    if (count == 2) 1 else acc.first,
+                    if (count == 3) 1 else acc.second)
             })
 
-    fun checksumBoxes(lines: List<String>): Int {
-        val res = lines
-                .map(::letterFreq)
-                .reduce({ acc, v -> Pair(
-                        acc.first + v.first,
-                        acc.second + v.second)})
-
-        return res.first * res.second
-    }
+    fun checksumBoxes(lines: List<String>): Int = with(
+        lines.map(::letterFreq).reduce({ acc, v -> acc + v})) { first * second }
 
     fun singleCharacterDiff(str1: String?, str2: String?): Int? {
         if (str1 == null || str2 == null || str1.length != str2.length) {
