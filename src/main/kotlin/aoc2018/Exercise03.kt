@@ -28,16 +28,13 @@ object Exercise03 {
         var acc = 0
         for (row in entry.bottom .. entry.bottom + entry.height - 1) {
             for (col in entry.left .. entry.left + entry.width - 1) {
-                if (store[col][row] == OVERLAP) {
-                    // already overlaping, skip
-                    continue
-                }
-
-                if (store[col][row] != null) {
-                    store[col][row] = OVERLAP
-                    acc ++
-                } else {
-                    store[col][row] = entry.id
+                when (store[col][row]) {
+                    OVERLAP-> {} // noop
+                    null -> store[col][row] = entry.id
+                    else -> {
+                        store[col][row] = OVERLAP
+                        acc ++
+                    }
                 }
             }
         }
