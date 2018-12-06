@@ -11,7 +11,9 @@ fun main(args: Array<String>) {
         "04A" to (Exercise04::sleepingGuard to "/04"),
         "04B" to (Exercise04::guardMinuteFrequency to "/04"),
         "05A" to (Exercise05::reactPolymerLength to "/05"),
-        "05B" to (Exercise05::reactBestPolymer to "/05")
+        "05B" to (Exercise05::reactBestPolymer to "/05"),
+        "06A" to (Exercise06::sizeOfLargestArea to "/06"),
+        "06B" to (Exercise06::sizeOfSafestArea to "/06")
     )
 
     when (val pair = programs[args[0]]) {
