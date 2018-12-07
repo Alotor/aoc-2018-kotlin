@@ -13,7 +13,9 @@ fun main(args: Array<String>) {
         "05A" to (Exercise05::reactPolymerLength to "/05"),
         "05B" to (Exercise05::reactBestPolymer to "/05"),
         "06A" to (Exercise06::sizeOfLargestArea to "/06"),
-        "06B" to (Exercise06::sizeOfSafestArea to "/06")
+        "06B" to (Exercise06::sizeOfSafestArea to "/06"),
+        "07A" to (Exercise07::assembleOrder to "/07"),
+        "07B" to (Exercise07::assembleOrderWithWorkers to "/07")
     )
 
     when (val pair = programs[args[0]]) {

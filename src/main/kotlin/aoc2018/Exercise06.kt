@@ -85,7 +85,7 @@ object Exercise06 {
         }
 
         var count = 0
-        gridEach(grid) { _, col, value ->
+        gridEach(grid) { _, _, value ->
             count += (value ?: 0)
         }
         return count

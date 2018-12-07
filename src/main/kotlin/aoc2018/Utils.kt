@@ -17,4 +17,6 @@ operator fun Pair<Int, Int>.plus(element: Pair<Int, Int>): Pair<Int, Int> =
     Pair(first + element.first, second + element.second)
 
 
-
+fun <A,B> reversePair(pair: Pair<A,B>): Pair<B, A> {
+    return Pair(pair.second, pair.first)
+}
