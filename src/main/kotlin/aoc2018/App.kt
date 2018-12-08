@@ -15,7 +15,9 @@ fun main(args: Array<String>) {
         "06A" to (Exercise06::sizeOfLargestArea to "/06"),
         "06B" to (Exercise06::sizeOfSafestArea to "/06"),
         "07A" to (Exercise07::assembleOrder to "/07"),
-        "07B" to (Exercise07::assembleOrderWithWorkers to "/07")
+        "07B" to (Exercise07::assembleOrderWithWorkers to "/07"),
+        "08A" to (Exercise08::calculateMetadataSum to "/08"),
+        "08B" to (Exercise08::calculateMetadataChildrenValue to "/08")
     )
 
     when (val pair = programs[args[0]]) {
