@@ -17,7 +17,9 @@ fun main(args: Array<String>) {
         "07A" to (Exercise07::assembleOrder to "/07"),
         "07B" to (Exercise07::assembleOrderWithWorkers to "/07"),
         "08A" to (Exercise08::calculateMetadataSum to "/08"),
-        "08B" to (Exercise08::calculateMetadataChildrenValue to "/08")
+        "08B" to (Exercise08::calculateMetadataChildrenValue to "/08"),
+        "09A" to (Exercise09::gameHighscore to "/09"),
+        "09B" to (Exercise09::gameHighscorex100 to "/09")
     )
 
     when (val pair = programs[args[0]]) {
