@@ -19,7 +19,9 @@ fun main(args: Array<String>) {
         "08A" to (Exercise08::calculateMetadataSum to "/08"),
         "08B" to (Exercise08::calculateMetadataChildrenValue to "/08"),
         "09A" to (Exercise09::gameHighscore to "/09"),
-        "09B" to (Exercise09::gameHighscorex100 to "/09")
+        "09B" to (Exercise09::gameHighscorex100 to "/09"),
+        "10A" to (Exercise10::calculateLightsMessage to "/10"),
+        "10B" to (Exercise10::calculateLightsTime to "/10")
     )
 
     when (val pair = programs[args[0]]) {

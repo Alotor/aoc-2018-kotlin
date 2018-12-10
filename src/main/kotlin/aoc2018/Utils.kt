@@ -62,3 +62,8 @@ class CircularLinkedList<T> {
     }
 }
 
+
+data class Vect2D (
+    val positionX: Int, val positionY: Int,
+    val velocityX: Int, val velocityY: Int
+){}
