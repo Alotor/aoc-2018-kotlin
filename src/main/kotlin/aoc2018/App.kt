@@ -21,7 +21,9 @@ fun main(args: Array<String>) {
         "09A" to (Exercise09::gameHighscore to "/09"),
         "09B" to (Exercise09::gameHighscorex100 to "/09"),
         "10A" to (Exercise10::calculateLightsMessage to "/10"),
-        "10B" to (Exercise10::calculateLightsTime to "/10")
+        "10B" to (Exercise10::calculateLightsTime to "/10"),
+        "11A" to (Exercise11::calculateMaxPowerCell to "/11"),
+        "11B" to (Exercise11::calculateMaxPowerCellAnySize to "/11")
     )
 
     when (val pair = programs[args[0]]) {
