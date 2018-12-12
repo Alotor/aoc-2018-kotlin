@@ -2,6 +2,7 @@ package aoc2018
 
 import java.io.File
 import java.net.URL
+import java.math.BigInteger
 
 object Utils {
     fun resolveResource(resource: String): URL {
@@ -67,3 +68,7 @@ data class Vect2D (
     val positionX: Int, val positionY: Int,
     val velocityX: Int, val velocityY: Int
 ){}
+
+fun b(num: Int): BigInteger {
+    return num.toBigInteger()
+}
