@@ -10,8 +10,8 @@ class PotState(val state: String, val from: Int, val to: Int) {
     fun strIdx(index: Int) = index - this.from
 
     fun window(index: Int, offsetStart: Int = -2, offsetEnd: Int = 2): String =
-        (index + offsetStart .. index + offsetEnd).fold(StringBuilder()) { str, index ->
-            str.append(this.state.getOrNull(strIdx(index)) ?: ".")
+        (index + offsetStart .. index + offsetEnd).fold(StringBuilder()) { str, curIndex ->
+            str.append(this.state.getOrNull(strIdx(curIndex)) ?: ".")
         }.toString()
 
     fun set(index: Int, value: String): PotState {
@@ -99,6 +99,6 @@ object Exercise12 {
         }
 
         val target: BigInteger = 50000000000.toBigInteger()
-        return b(value) + ((target - b(iter)) * b(80))
+        return b(value) + ((target - b(iter)) * b(increase))
     }
 }
